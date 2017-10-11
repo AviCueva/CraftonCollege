@@ -107,15 +107,16 @@ int question4() {
 3
 5
 5
-
 */
+
 int question5() {
 	int number = 0;
 
 	cout << "Enter an integer: " << endl;
 	cin >> number;
 
-	do {
+	while ((number % 2 == 0) || (number % 3 == 0) || (number % 4 == 0) || (number % 5 == 0) || (number % 6 == 0) || (number % 7 == 0) || (number % 8 == 0) || (number % 9 == 0)) {
+
 		if (number % 2 == 0) {
 			cout << "2" << endl;
 			number /= 2;
@@ -148,13 +149,10 @@ int question5() {
 			cout << "9" << endl;
 			number /= 9;
 		}
-	} while (number > 0){
-		cout << number << endl;
-		break;
-		}
-		return 0;
+	}
+	cout << number << endl;
+	return 0;
 }
-
 /* 6.	Write a program that prompts the user for an integer and then prints out all prime numbers up to that integer. For example, when the user enters 20, the program should print
 2
 3
