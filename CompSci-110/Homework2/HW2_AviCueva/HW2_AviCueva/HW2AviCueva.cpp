@@ -166,9 +166,23 @@ Recall that a number is prime if it is not divisible by any number except 1 and 
 
 */
 int question6() {
+	int number = 0;
 
+	cout << "Enter an integer: " << endl;
+	cin >> number;
+	
+	cout << "2" << endl;
+	for (int i = 2; i < (number + 2); i++){
+		for (int j = 2; j < i; j++){
+			if (i % j == 0)
+				break;
+			else if (i == j + 1)
+				cout << i << endl;
+		}
+	}
+	
 	return 0;
-}
+	}
 
 /*
 7.	Write a program that converts positive integers into the Roman number system. The Roman number system has digits
@@ -207,8 +221,8 @@ int main()
 	// question2(); // Working
 	// question3(); // Working
 	// question4(); // Working
-	question5();
-	//question6();
+	// question5(); // Working
+	question6();
 	//question7();
     return 0;
 }
