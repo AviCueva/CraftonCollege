@@ -171,7 +171,8 @@ int question6() {
 	cout << "Enter an integer: " << endl;
 	cin >> number;
 	
-	cout << "2" << endl;
+	cout << "2" << endl; //necesary to capture 2 as a prime number
+
 	for (int i = 2; i < (number + 2); i++){
 		for (int j = 2; j < i; j++){
 			if (i % j == 0)
@@ -211,8 +212,21 @@ As you can see, a I preceding a V or X is subtracted from the value, and you can
 Your program should take an input, such as 1978, and convert it to Roman numerals, MCMLXXVIII.  The program should continue until the sentinel value of 0 is entered to denote the end of inputs.
 
 */
-int question7() {
 
+int question7() {
+	int number = 0;
+
+	cout << "Enter an integer and I will convert it to Roman Numerals for you: " << endl;
+	cin >> number;
+
+	string romanNumerals;
+	string M[] = { "","M","MM","MMM" };
+	string C[] = { "","C","CC","CCC","CD","D","DC","DCC","DCCC","CM" };
+	string X[] = { "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC" };
+	string I[] = { "","I","II","III","IV","V","VI","VII","VIII","IX" };
+	romanNumerals = M[number / 1000] + C[(number % 1000) / 100] + X[(number % 100) / 10] + I[(number % 10)];
+	cout << romanNumerals << endl;
+	
 	return 0;
 }
 int main()
@@ -222,8 +236,8 @@ int main()
 	// question3(); // Working
 	// question4(); // Working
 	// question5(); // Working
-	question6();
-	//question7();
+	// question6(); // Working
+	 question7();
     return 0;
 }
 
