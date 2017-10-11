@@ -1,0 +1,4 @@
+﻿  Project1AviCueva.cpp
+e:\crafton\fall 2017\compsci-110\project1\project1_avicueva\project1_avicueva\project1avicueva.cpp(97): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  Project1_AviCueva.vcxproj -> E:\Crafton\Fall 2017\CompSci-110\Project1\Project1_AviCueva\Debug\Project1_AviCueva.exe
+  Project1_AviCueva.vcxproj -> E:\Crafton\Fall 2017\CompSci-110\Project1\Project1_AviCueva\Debug\Project1_AviCueva.pdb (Partial PDB)

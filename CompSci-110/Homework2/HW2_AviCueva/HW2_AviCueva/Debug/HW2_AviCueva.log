@@ -1,0 +1,8 @@
+﻿  HW2AviCueva.cpp
+e:\crafton\fall 2017\compsci-110\homework2\hw2_avicueva\hw2_avicueva\hw2avicueva.cpp(170): error C2062: type 'int' unexpected
+e:\crafton\fall 2017\compsci-110\homework2\hw2_avicueva\hw2_avicueva\hw2avicueva.cpp(170): error C2143: syntax error: missing ';' before '{'
+e:\crafton\fall 2017\compsci-110\homework2\hw2_avicueva\hw2_avicueva\hw2avicueva.cpp(202): error C2601: 'question7': local function definitions are illegal
+  e:\crafton\fall 2017\compsci-110\homework2\hw2_avicueva\hw2_avicueva\hw2avicueva.cpp(112): note: this line contains a '{' which has not yet been matched
+e:\crafton\fall 2017\compsci-110\homework2\hw2_avicueva\hw2_avicueva\hw2avicueva.cpp(207): error C2601: 'main': local function definitions are illegal
+  e:\crafton\fall 2017\compsci-110\homework2\hw2_avicueva\hw2_avicueva\hw2avicueva.cpp(112): note: this line contains a '{' which has not yet been matched
+e:\crafton\fall 2017\compsci-110\homework2\hw2_avicueva\hw2_avicueva\hw2avicueva.cpp(112): fatal error C1075: the left brace '{' was unmatched at the end of the file

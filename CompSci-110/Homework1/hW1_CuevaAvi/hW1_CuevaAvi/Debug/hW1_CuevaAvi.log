@@ -1,0 +1,8 @@
+﻿  hW1_q1_CuevaAvi.cpp
+e:\crafton\fall 2017\compsci-110\homework1\hw1_cuevaavi\hw1_cuevaavi\hw1_q1_cuevaavi.cpp(304): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\crafton\fall 2017\compsci-110\homework1\hw1_cuevaavi\hw1_cuevaavi\hw1_q1_cuevaavi.cpp(314): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\crafton\fall 2017\compsci-110\homework1\hw1_cuevaavi\hw1_cuevaavi\hw1_q1_cuevaavi.cpp(319): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\crafton\fall 2017\compsci-110\homework1\hw1_cuevaavi\hw1_cuevaavi\hw1_q1_cuevaavi.cpp(324): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\crafton\fall 2017\compsci-110\homework1\hw1_cuevaavi\hw1_cuevaavi\hw1_q1_cuevaavi.cpp(278): warning C4715: 'question6': not all control paths return a value
+  hW1_CuevaAvi.vcxproj -> E:\Crafton\Fall 2017\CompSci-110\Homework1\hW1_CuevaAvi\Debug\hW1_CuevaAvi.exe
+  hW1_CuevaAvi.vcxproj -> E:\Crafton\Fall 2017\CompSci-110\Homework1\hW1_CuevaAvi\Debug\hW1_CuevaAvi.pdb (Partial PDB)
