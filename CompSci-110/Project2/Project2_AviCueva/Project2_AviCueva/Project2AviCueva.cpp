@@ -25,9 +25,10 @@ int initialRandom(int a) {
 	
 	return a;
 }
+
 int displayRules() {
 
-	cout << "**************** THE GAME OF NIM ****************" << endl;
+	cout << "**************** THE GAME OF NIM ****************" << endl << endl;
 	cout << "Rules of the game:" << endl;
 	cout << "* Each player can remove 1, 2, or 3 stones fromt he pile." << endl;
 	cout << "* The player who makes the last move loses." << endl << endl;
@@ -75,7 +76,7 @@ int removeStones(int a, int b) {
 	if (stones >=0) {
 		return stones;
 	}
-	else{
+	else if (stones == 1){
 		return -1;
 	}
 }
@@ -86,6 +87,7 @@ int playGame(int a, int b, int c) {
 	// c = player, 0 = human, 1 = computer
 	string player = " ";
 	int stonesToRemove, stonesRemaining;
+	bool winner = false;
 
 	if (c == 0) {
 		player = "Human";
@@ -102,38 +104,54 @@ int playGame(int a, int b, int c) {
 	}
 	else {
 		cout << "The Computer plays first." << endl << endl;
-
-	} 
+	}
 
 	stonesRemaining = a;
 
-	while (a > 0) {
+	while (!winner) {
 		if (player == "Human") {
-
-
+			//Human turn stuff here
+			player = "Computer";
+			cout << "Human stuff" << endl;
 		}
 		else {
 			cout << "The computer is choosing a move..." << endl;
 			if (difficulty == 0) { //easy
 				stonesToRemove = rand() % 3 + 1;
-				stonesToRemove = removeStones(stonesToRemove, stonesRemaining);
-				if (stonesToRemove < 0); {
-					stonesToRemove = rand() % 3 + 1;
-					stonesToRemove = removeStones(stonesToRemove, stonesRemaining);
+				if (stonesRemaining > 4) {
+					stonesRemaining = stonesRemaining - stonesToRemove;
+					player = "Human";
 				}
-
-
+				else if ((stonesRemaining - stonesToRemove) > 0) {
+					stonesRemaining = stonesRemaining - stonesToRemove;
+					player = "Human";
+				}
+				else if ((stonesRemaining - stonesToRemove) < 0) {
+					player = "Computer";
+				}
+				else if ((stonesRemaining - stonesToRemove) == 0) {
+					winner = true;
+				}
 			}
 			else { // hard
 
 			}
-
 		}
-
+		cout << "The pile now has " << stonesRemaining << " stones left. " << endl;
 	}
-
 	
+
+	if ((winner == true) && (player == "Human")) {
+		cout << "Congratulations, you won!  :>" << endl << endl;
+		cout << "*************** Thank you for playing ***************" << endl;
+	}
+	else {
+		cout << "Sorry, you lost the game  :<" << endl << endl;
+		cout << "*************** Thank you for playing ***************" << endl;
+	}
+	return 0;
 }
+
 int main(){
 	// Set the random seed based on time.
 	srand(time(0)); 
@@ -145,7 +163,7 @@ int main(){
 	// cout << difficulty << endl; // Debugging line
 	player = findPlayer(0); // 0 = Human, 1 = Computer
 
-	winner = playGame(initialStones, difficulty, player);
+	playGame(initialStones, difficulty, player);
 	
 	return 0;
 }
