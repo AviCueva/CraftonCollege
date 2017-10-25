@@ -1,14 +1,20 @@
-// Project2AviCueva.cpp : Defines the entry point for the console application.
-//
+/* Project2AviCueva.cpp : Game of Nim.
+The game of Nim is a mathematical game of strategy with a number of variants.
+
+Author: Avi Cueva
+Class: CSCI-110
+Date: 10/23/2017
+*/
 
 /* Psuedo-code
 1. Figure out initial n, using random between 10 and 21.
-2. randomly pick either computer or human 
+2. randomly pick either computer or human
 3. Alternate picking how many stones to remove, 3, 2, or 1.
 4. repeat until someone has take the last stone.  They are the loser.
 */
 
 #include "stdafx.h"
+#include <Windows.h>
 #include <iostream>
 #include <ctime>
 
@@ -22,7 +28,7 @@ int initialRandom(int a) {
 
 	a = (rand() % 11) + 10;
 	// cout << a << endl; // Debugging line to make sure correct value was generated.
-	
+
 	return a;
 }
 
@@ -37,7 +43,7 @@ int displayRules() {
 }
 
 int chooseMode(int a) {
-	
+
 	char choice = ' ';
 
 	cout << "Choose mode:" << endl;
@@ -56,7 +62,7 @@ int chooseMode(int a) {
 		cout << "Please choose again: " << endl;
 		chooseMode(0);
 	}
-} 
+}
 
 int findPlayer(int a) {
 
@@ -73,10 +79,10 @@ int removeStones(int a, int b) {
 
 	stones = b - a;
 
-	if (stones >=0) {
+	if (stones >= 0) {
 		return stones;
 	}
-	else if (stones == 1){
+	else if (stones == 1) {
 		return -1;
 	}
 }
@@ -111,11 +117,32 @@ int playGame(int a, int b, int c) {
 	while (!winner) {
 		if (player == "Human") {
 			//Human turn stuff here
-			player = "Computer";
-			cout << "Human stuff" << endl;
+			cout << "It is your turn. Enter the number of stones you would like to remove: " << endl;
+			cin >> stonesToRemove;
+			if (((stonesToRemove == 1) || (stonesToRemove == 2) || (stonesToRemove == 3) && (player == "Human"))) {
+				if (stonesRemaining > 4) {
+					stonesRemaining = stonesRemaining - stonesToRemove;
+					player = "Computer";
+				}
+				else if (((stonesRemaining - stonesToRemove) > 0) && (player == "Human")) {
+					stonesRemaining = stonesRemaining - stonesToRemove;
+					player = "Computer";
+				}
+				else if (((stonesRemaining - stonesToRemove) < 0) && (player == "Human")) {
+					player = "Human";
+				}
+				else if (((stonesRemaining - stonesToRemove) == 0) && (player == "Human")) {
+					winner = true;
+				}
+			}
+			else {
+				cout << stonesToRemove << " is not a valid move. Enter either 1, 2, or 3 for the number of stones. " << endl;
+			}
 		}
+
 		else {
 			cout << "The computer is choosing a move..." << endl;
+			Sleep(500);
 			if (difficulty == 0) { //easy
 				stonesToRemove = rand() % 3 + 1;
 				if (stonesRemaining > 4) {
@@ -134,14 +161,24 @@ int playGame(int a, int b, int c) {
 				}
 			}
 			else { // hard
-
+				if ((stonesRemaining == 1) || (stonesRemaining == 0)) {
+					winner = true;
+				}
+				if ((stonesRemaining % 4 == 0) && (stonesRemaining > 3)) {
+					stonesRemaining = stonesRemaining - 3;
+					player = "Human";
+				}
+				else if (stonesRemaining > 1) {
+					stonesRemaining = stonesRemaining - 1;
+					player = "Human";
+				}
 			}
+
 		}
 		cout << "The pile now has " << stonesRemaining << " stones left. " << endl;
 	}
-	
 
-	if ((winner == true) && (player == "Human")) {
+	if ((winner == true) && (player == "Computer")) {
 		cout << "Congratulations, you won!  :>" << endl << endl;
 		cout << "*************** Thank you for playing ***************" << endl;
 	}
@@ -152,9 +189,9 @@ int playGame(int a, int b, int c) {
 	return 0;
 }
 
-int main(){
+int main() {
 	// Set the random seed based on time.
-	srand(time(0)); 
+	srand(time(0));
 
 	initialStones = initialRandom(0);
 	// cout << initialStones << endl; // Debugging line to very initialStones was populated.
@@ -164,7 +201,7 @@ int main(){
 	player = findPlayer(0); // 0 = Human, 1 = Computer
 
 	playGame(initialStones, difficulty, player);
-	
+
 	return 0;
 }
 
