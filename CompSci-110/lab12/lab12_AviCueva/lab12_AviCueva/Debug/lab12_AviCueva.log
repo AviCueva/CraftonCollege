@@ -1,6 +1,7 @@
 ﻿  lab12_AviCueva.cpp
 f:\craftoncollege\compsci-110\lab12\lab12_avicueva\lab12_avicueva\lab12_avicueva.cpp(32): warning C4018: '<': signed/unsigned mismatch
 f:\craftoncollege\compsci-110\lab12\lab12_avicueva\lab12_avicueva\lab12_avicueva.cpp(69): warning C4018: '<': signed/unsigned mismatch
+f:\craftoncollege\compsci-110\lab12\lab12_avicueva\lab12_avicueva\lab12_avicueva.cpp(76): warning C4018: '<': signed/unsigned mismatch
 f:\craftoncollege\compsci-110\lab12\lab12_avicueva\lab12_avicueva\lab12_avicueva.cpp(105): warning C4018: '<': signed/unsigned mismatch
 f:\craftoncollege\compsci-110\lab12\lab12_avicueva\lab12_avicueva\lab12_avicueva.cpp(118): warning C4018: '<': signed/unsigned mismatch
   lab12_AviCueva.vcxproj -> F:\CraftonCollege\CompSci-110\lab12\lab12_AviCueva\Debug\lab12_AviCueva.exe
