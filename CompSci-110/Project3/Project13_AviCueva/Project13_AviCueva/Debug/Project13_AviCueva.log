@@ -1,3 +1,4 @@
 ﻿  Project13_AviCueva.cpp
-f:\craftoncollege\compsci-110\project3\project13_avicueva\project13_avicueva\project13_avicueva.cpp(80): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+f:\craftoncollege\compsci-110\project3\project13_avicueva\project13_avicueva\project13_avicueva.cpp(243): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+f:\craftoncollege\compsci-110\project3\project13_avicueva\project13_avicueva\project13_avicueva.cpp(238): warning C4715: 'playGame': not all control paths return a value
   Project13_AviCueva.vcxproj -> F:\CraftonCollege\CompSci-110\Project3\Project13_AviCueva\Debug\Project13_AviCueva.exe
