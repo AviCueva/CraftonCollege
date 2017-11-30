@@ -36,9 +36,9 @@ private:  // The class' private internal data members
 };
 
 GameCharacter::GameCharacter(string initName) {  // Default constructor
-   name  = initName;              // Default name
-   maxHealth = 100;               // Default price
-   currentHealth = maxHealth;     // Default price
+   name  = initName;
+   maxHealth = 100;
+   currentHealth = maxHealth;
    attack = 5;
    defense = 3;
    evasion = 1;
