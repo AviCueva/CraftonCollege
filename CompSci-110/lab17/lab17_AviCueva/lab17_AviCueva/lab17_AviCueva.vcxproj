@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{B7D6CCE8-96E5-41C5-9171-E74210BF3DA0}</ProjectGuid>
+    <ProjectGuid>{0D03188E-27A9-48F0-A63E-3242C0E82B09}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>Project4TeamPokemonWorld</RootNamespace>
+    <RootNamespace>lab17AviCueva</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -143,17 +143,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Console.h" />
-    <ClInclude Include="enemy.h" />
-    <ClInclude Include="slider.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Console.cpp" />
-    <ClCompile Include="enemy.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="slider.cpp" />
+    <ClCompile Include="lab17_AviCueva.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
