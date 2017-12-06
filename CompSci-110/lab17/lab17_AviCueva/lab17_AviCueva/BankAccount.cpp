@@ -1,9 +1,11 @@
-#include "BankAccount.h"
+
 #include "stdafx.h"
 #include <iostream>
 #include <string>
 #include <iomanip>
-//
+
+#include "BankAccount.h"
+
 using namespace std;
 
 //Part 2 Default Constructor
@@ -12,17 +14,16 @@ BankAccount::BankAccount() : accountID("00000-00000"), holderName(" "), accountB
 	return;
 }
 
-BankAccount::BankAccount()
-{
-	return;
+BankAccount::BankAccount(string accountID, string Holdername, double AccountBalance){
+	BankAccount::accountID = accountID;
+	BankAccount::holderName = Holdername;
+	BankAccount::accountBalance = AccountBalance;
+	BankAccount::memberStatus = true;
+
+return;
 }
 
-BankAccount::BankAccount(string accountID, string Holdername, double AccountBalance)
-{
-	return;
-}
-
-BankAccount::BankAccount(string Holdername = " ", double AccountBalance = 0, string accountID = "0000 - 0000") {
+BankAccount::BankAccount(string Holdername, double AccountBalance, string accountID) {
 	BankAccount::accountID = accountID;
 	BankAccount::holderName = Holdername;
 	BankAccount::accountBalance = AccountBalance;

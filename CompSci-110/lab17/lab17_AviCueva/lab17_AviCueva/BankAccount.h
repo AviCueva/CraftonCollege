@@ -1,6 +1,3 @@
-#ifndef BANKACCOUNT_H
-#define BANKACCOUNT_H
-
 #pragma once
 
 #include "stdafx.h"
@@ -13,10 +10,10 @@ using namespace std;
 class BankAccount {
 
 public:
-	BankAccount(void);
-	//BankAccount::BankAccount(); //Part2
-	BankAccount(string accountID, string Holdername, double AccountBalance);
-	BankAccount(string Holdername, double AccountBalance, string accountID);
+	//BankAccount::BankAccount(void);
+	BankAccount::BankAccount(); //Part2
+	BankAccount::BankAccount(string accountID, string Holdername, double AccountBalance);
+	BankAccount::BankAccount(string Holdername, double AccountBalance, string accountID);
 	//BankAccount::BankAccount(string Holdername, double AccountBalance, string accountID); //Part 2
 	void Initialize(string accountID, string Holdername, double AccountBalance);
 	void SetHolderName(string HolderName);
@@ -36,5 +33,3 @@ private:
 	bool memberStatus;
 	double interest = .05; // Part 2, Value between 0 and 1 representing daily interest rate.
 };
-
-#endif // !BankAccount_H
