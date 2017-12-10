@@ -75,6 +75,11 @@ double GameCharacter::ChanceForMob() {
 }
 
 void GameCharacter::increaseChance(double chance) {
-	chanceForMob += chance;
+	chanceForMob += (chance * (rand() % 2));
+	return;
+}
+
+void GameCharacter::resetChance() {
+	chanceForMob = 0;
 	return;
 }

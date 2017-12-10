@@ -23,6 +23,8 @@ public:                                           // The class' public functions
 	void  AttackOpponent(GameCharacter& opponent); // Deal damage to a GameCharacter class
 	double ChanceForMob();
 	void increaseChance(double chance);
+
+	void resetChance();
 	
 
 private:  // The class' private internal data members
