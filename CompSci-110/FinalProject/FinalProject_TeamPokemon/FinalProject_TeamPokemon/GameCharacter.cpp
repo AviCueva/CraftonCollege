@@ -15,6 +15,7 @@ GameCharacter::GameCharacter(string initName) {  // Default constructor
 	attack = 5;
 	defense = 3;
 	evasion = 1;
+	chanceForMob = 0;
 
 	return;
 }
@@ -66,4 +67,14 @@ void GameCharacter::AttackOpponent(GameCharacter& opponent) {
 	int damageTaken = CalculateDamage(opponent.defense);
 	opponent.SubtractHP(damageTaken);
 	cout << opponent.GetName() << " took a whopping " << damageTaken << " damage!" << endl;
+}
+
+double GameCharacter::ChanceForMob() {
+	// cout << chanceForMob;
+	return GameCharacter::chanceForMob;
+}
+
+void GameCharacter::increaseChance(double chance) {
+	chanceForMob += chance;
+	return;
 }

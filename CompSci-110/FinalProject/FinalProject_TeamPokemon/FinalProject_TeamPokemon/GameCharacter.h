@@ -10,7 +10,9 @@ using namespace std;
 class GameCharacter {
 public:                                           // The class' public functions
 	string GetName();                            // Name of character
-	int   GetLevel();                              // Level of character
+	int   GetLevel();
+	GameCharacter(string initName);
+	// Level of character
 	int   GetCurrentHealth();                      // Current health of character
 	int   GetAttack();                             // Attack of character
 	int   GetDefense();                            // Defense of character
@@ -19,7 +21,9 @@ public:                                           // The class' public functions
 	void  AddHP(int hpRestored);                   // Add health to the character's HP
 	int   CalculateDamage(int defense);            // Calculate damage dealth usering GetAttack()
 	void  AttackOpponent(GameCharacter& opponent); // Deal damage to a GameCharacter class
-	GameCharacter(string initName);
+	double ChanceForMob();
+	void increaseChance(double chance);
+	
 
 private:  // The class' private internal data members
 	string    name;

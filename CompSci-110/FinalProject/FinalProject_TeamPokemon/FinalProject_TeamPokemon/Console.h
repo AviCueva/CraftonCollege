@@ -1,5 +1,5 @@
-#ifndef CONSOLE_H
-#define CONSOLE_H
+//#ifndef CONSOLE_H
+//#define CONSOLE_H
 #pragma once
 
 #include <string>
@@ -12,11 +12,9 @@ public:
 	Console();
 	~Console();
 	void Move(int V, int H);
-	void increaseChanceForMob(double chance);
-	double currentChance(class GameCharacter);
 
 private:
-	double ChanceForMob;
+	
 };
 
 extern char map[27][120];
@@ -35,4 +33,4 @@ extern bool treasure_opened;
 extern bool got_key;
 extern bool got_key2;
 
-#endif
+//#endif

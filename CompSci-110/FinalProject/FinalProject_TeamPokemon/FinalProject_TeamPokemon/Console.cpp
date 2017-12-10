@@ -52,13 +52,7 @@ Console::Console()
 Console::~Console()
 {
 }
-void increaseChanceForMob(double change) {
-	/*cout << Console:ChanceForMob << endl;*/
-}
-double currentChance(class GameCharacter) {
 
-	return GameCharacter::chanceForMob;
-}
 void Console::Move(int V, int H)
 {
 	int y2 = y + V;
