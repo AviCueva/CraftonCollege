@@ -9,7 +9,7 @@ using namespace std;
 
 class GameCharacter {
 public:                                           // The class' public functions
-	string   GetName();                            // Name of character
+	string GetName();                            // Name of character
 	int   GetLevel();                              // Level of character
 	int   GetCurrentHealth();                      // Current health of character
 	int   GetAttack();                             // Attack of character

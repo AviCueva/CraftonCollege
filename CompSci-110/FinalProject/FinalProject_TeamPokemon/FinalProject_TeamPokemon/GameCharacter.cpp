@@ -23,8 +23,28 @@ int GameCharacter::GetCurrentHealth() {
 	return currentHealth;
 }
 
+int GameCharacter::GetAttack()
+{
+	return 0;
+}
+
+int GameCharacter::GetDefense()
+{
+	return 0;
+}
+
+int GameCharacter::GetEvasion()
+{
+	return 0;
+}
+
 string GameCharacter::GetName() {
 	return name;
+}
+
+int GameCharacter::GetLevel()
+{
+	return 0;
 }
 
 // "GameCharacter::" means SubtractHP is a GameCharacter member function
