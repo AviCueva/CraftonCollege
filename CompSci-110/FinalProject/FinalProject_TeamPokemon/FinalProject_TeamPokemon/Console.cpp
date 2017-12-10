@@ -1,8 +1,9 @@
 ﻿#include "stdafx.h"
 #include "Console.h"
+#include "GameCharacter.h"
 
-int x = 1;
-int y = 1;
+int x = 6;
+int y = 6;
 
 int number_of_coins = 0;
 int health = 100;
@@ -16,12 +17,12 @@ bool got_key2 = false;
 
 char map[27][120] = {
 	"#######################################################################################################################",
-	"#@                       nn nn                                                                 ^    ^                 #",
-	"#                     nnn nnnn                                                                ^ ^ ^^B^ ^              #",
-	"#                    n nnn n                                                               ^  ^ ^ ^  ^ ^              #",
-	"#                    nnnnnn                                                               ^ ^ ^ ^ ^   ^ ^^            #",
-	"#                     nnn                                                                                             #",
-	"#                      n                                                                                              #",
+	"#                     mmnnmnn                                                                 ^    ^                 #",
+	"#   /Town\\            mnnnmnnnn                                                              ^^^^^ ^^B^ ^             #",
+	"#  / ____ \\           mnmnnnmn                                                              ^^  ^^^^^  ^ ^            #",
+	"# /| |  | |\\           nnnnnn                                                               ^^^^^^^^^^   ^^^^         #",
+	"#  |_|  |_|            nnn                                                                                            #",
+	"#     @                 n                                                                                             #",
 	"#                                                                                                                     #",
 	"#                     nn n                                                                                            #",
 	"#                                                                                                                     #",
@@ -32,13 +33,13 @@ char map[27][120] = {
 	"#                                                                                                                     #",
 	"#                                                                                                                     #",
 	"#                                                                                                                     #",
-	"#                                                                                                                     #",
-	"#                                                                                                                     #",
-	"#                                                                                                                     #",
-	"#                                                                                                                     #",
-	"#                                                                                                                     #",
-	"#                                                                                                                     #",
-	"#                                                                                                                     #",
+	"#                                                             w                                                       #",
+	"#                                                    w       w w                                                      #",
+	"#                                                  wwww     wwwww                                                     #",
+	"#                                                 wwwwww  wwwww ww                                                    #",
+	"#                                                wwwwwwwwwwwwwww www                                                  #",
+	"#                                                w wwwwwwwwwwwwwww ww                                                 #",
+	"#                                                  wwwwwwwwwwwwwwwwww                                                 #",
 	"#                                                                                                                     #",
 	"#                                                                                                                     #",
 	"#######################################################################################################################"};
@@ -51,7 +52,13 @@ Console::Console()
 Console::~Console()
 {
 }
+void increaseChanceForMob(double change) {
+	/*cout << Console:ChanceForMob << endl;*/
+}
+double currentChance(class GameCharacter) {
 
+	return GameCharacter::chanceForMob;
+}
 void Console::Move(int V, int H)
 {
 	int y2 = y + V;

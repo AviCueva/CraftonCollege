@@ -12,6 +12,11 @@ public:
 	Console();
 	~Console();
 	void Move(int V, int H);
+	void increaseChanceForMob(double chance);
+	double currentChance(class GameCharacter);
+
+private:
+	double ChanceForMob;
 };
 
 extern char map[27][120];

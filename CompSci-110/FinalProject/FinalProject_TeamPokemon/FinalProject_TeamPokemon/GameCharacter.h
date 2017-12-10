@@ -29,4 +29,5 @@ private:  // The class' private internal data members
 	int       attack;
 	int       defense;
 	int       evasion;
+	double	  chanceForMob;
 };
