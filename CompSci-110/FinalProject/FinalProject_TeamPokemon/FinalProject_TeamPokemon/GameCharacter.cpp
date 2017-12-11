@@ -26,7 +26,7 @@ int GameCharacter::GetCurrentHealth() {
 
 int GameCharacter::GetAttack()
 {
-	return 0;
+	return attack;
 }
 
 int GameCharacter::GetDefense()
