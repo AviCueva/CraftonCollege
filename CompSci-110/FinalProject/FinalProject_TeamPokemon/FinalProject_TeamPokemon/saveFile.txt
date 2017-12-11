@@ -1,2 +1,2 @@
 Health: 100
-Attack Power:15
+Attack Power:10
