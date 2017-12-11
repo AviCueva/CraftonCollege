@@ -55,7 +55,13 @@ void GameCharacter::SubtractHP(int damageTaken) {
 }
 
 void GameCharacter::AddHP(int hpRestored) {
-	currentHealth = currentHealth += hpRestored >= maxHealth ? maxHealth : currentHealth += hpRestored;
+	if (currentHealth < 100){
+		currentHealth = 100;
+	}
+	else {
+		currentHealth = currentHealth += hpRestored >= maxHealth ? maxHealth : currentHealth += hpRestored;
+	}
+
 	return;
 }
 
@@ -82,4 +88,10 @@ void GameCharacter::increaseChance(double chance) {
 void GameCharacter::resetChance() {
 	chanceForMob = 0;
 	return;
+}
+
+int GameCharacter::increaseAttack(GameCharacter& player, int attack)
+{
+	player.attack = attack;
+	return 0;
 }
