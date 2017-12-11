@@ -23,7 +23,7 @@ public:                                           // The class' public functions
 	void  AttackOpponent(GameCharacter& opponent); // Deal damage to a GameCharacter class
 	double ChanceForMob();
 	void increaseChance(double chance);
-
+	int GameCharacter::increaseAttack(GameCharacter& player, int attack);
 	void resetChance();
 	
 

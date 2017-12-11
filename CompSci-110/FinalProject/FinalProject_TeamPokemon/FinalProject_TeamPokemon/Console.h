@@ -18,6 +18,7 @@ private:
 };
 
 extern char map[27][120];
+extern char battleMap[27][120];
 extern int x;
 extern int y;
 
